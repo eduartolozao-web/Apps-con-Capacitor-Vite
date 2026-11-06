@@ -426,15 +426,6 @@ function mostrarFormularioSeguimiento(numero) {
   mostrarHistorialSeguimiento(caso)
 }
 
-// ESTADOS DE CONVIVENCIA
-
-const estadosCaso = [
-  'Reportado',
-  'En revisión',
-  'Infracción confirmada',
-  'Cerrado sin infracción',
-  'Cerrado'
-]
 
 // GUARDAR SEGUIMIENTO
 

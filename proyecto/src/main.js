@@ -2,6 +2,7 @@
 import './style.css'
 import { mostrarZonasComunes, seleccionarZona } from './modulos/zonasComunes.js'
 import { mostrarConvivencia } from './modulos/convivencia.js'
+import { mostrarZonasPrivadas } from './modulos/zonasPrivadas.js'
 
 const modulos = [
   {
@@ -103,6 +104,17 @@ function mostrarModulo(id) {
   `
 
   document.querySelector('#volver').addEventListener('click', mostrarInicio)
+  // MOSTRAR EL FORMULARIO DE ZONAS PRIVADAS
+
+if (id === 'zonas-privadas') {
+
+  const contenido = document.querySelector('.detalle')
+
+  if (contenido) {
+    mostrarZonasPrivadas(contenido)
+  }
+
+}
   // MOSTRAR EL FORMULARIO DE CONVIVENCIA
 
 if (id === 'convivencia') {
