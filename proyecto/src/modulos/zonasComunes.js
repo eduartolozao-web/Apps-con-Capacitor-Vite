@@ -1,5 +1,4 @@
-import { mostrarCanchas } from './canchas.js'
-import { mostrarParqueaderosViviendas } from './parqueaderosViviendas.js'
+
 /* MÓDULO DE GESTIÓN DE ZONAS COMUNES */
 
 const zonasComunes = [
@@ -102,7 +101,22 @@ if (id === 'parqueaderos-viviendas') {
   mostrarParqueaderosViviendas(contenido)
   return
 }
-
+if (id === 'parqueaderos-visitantes') {
+  mostrarParqueaderosVisitantes(contenido)
+  return
+}
+if (id === 'basuras') {
+  mostrarShutBasuras(contenido)
+  return
+}
+if (id === 'luminarias') {
+  mostrarLuminarias(contenido)
+  return
+}
+if (id === 'fachadas') {
+  mostrarFachadas(contenido)
+  return
+}
   contenido.innerHTML = `
     <section class="detalle">
       <div class="marca">${zona.icono}</div>
