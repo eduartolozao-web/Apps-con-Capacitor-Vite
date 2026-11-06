@@ -800,3 +800,2154 @@ table input[type="date"] {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* =========================================
+   AJUSTES FINALES DE PRESENTACIÓN SGPH
+   ========================================= */
+
+/* Reducir espacios excesivos del contenido */
+
+.detalle {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 25px;
+}
+
+/* Evitar exceso de espacio en paneles anidados */
+
+.detalle .detalle {
+  margin: 12px 0;
+  padding: 20px;
+}
+
+/* Formularios más compactos */
+
+form {
+  margin-top: 14px;
+  margin-bottom: 22px;
+  padding: 22px;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+/* Tarjetas más equilibradas */
+
+.tarjeta {
+  min-height: 185px;
+  padding: 24px 20px;
+}
+
+/* Títulos más próximos al contenido */
+
+.detalle h3 {
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+/* Separación de módulos */
+
+.modulos {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 600px) {
+  .detalle {
+    padding: 17px 13px;
+  }
+
+  .detalle .detalle {
+    padding: 14px 12px;
+  }
+
+  form {
+    padding: 16px 12px;
+  }
+
+  .tarjeta {
+    min-height: 155px;
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================
+   SGPH - DISEÑO EN DOS COLUMNAS
+   ZONAS PRIVADAS Y HABITANTES
+   ========================================== */
+
+/* CONTENEDOR GENERAL */
+
+.sgph-privadas {
+  max-width: 1200px;
+  width: 100%;
+  padding: 22px;
+}
+
+/* FORMULARIO A LA IZQUIERDA
+   REGISTROS A LA DERECHA */
+
+.sgph-privadas-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+  gap: 22px;
+  align-items: start;
+  width: 100%;
+}
+
+.sgph-privadas-formulario,
+.sgph-privadas-registros {
+  min-width: 0;
+  width: 100%;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(25, 55, 85, 0.05);
+}
+
+/* ENCABEZADOS */
+
+.sgph-privadas-formulario h2 {
+  font-size: 25px;
+  margin: 12px 0;
+}
+
+.sgph-privadas-formulario h3,
+.sgph-privadas-registros h3 {
+  font-size: 19px;
+  margin: 18px 0 12px;
+}
+
+.sgph-descripcion,
+.sgph-titulo-registros p {
+  color: #607386;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* FORMULARIO MÁS COMPACTO */
+
+.sgph-privadas-formulario form {
+  margin: 15px 0 18px;
+  padding: 18px;
+
+  background: #f7fafc;
+  border-radius: 14px;
+}
+
+.sgph-privadas-formulario form p {
+  margin-bottom: 14px;
+}
+
+/* INDICADORES DE VIVIENDAS */
+
+.sgph-resumen-viviendas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.sgph-indicador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  min-width: 0;
+  padding: 16px 13px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 13px;
+}
+
+.sgph-indicador span {
+  color: #456579;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.sgph-indicador strong {
+  color: #173b61;
+  font-size: 28px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+/* TABLAS DESPLAZABLES */
+
+.sgph-tabla-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sgph-tabla-scroll table {
+  width: 100%;
+  min-width: 760px;
+  margin: 0;
+}
+
+.sgph-tabla-scroll th,
+.sgph-tabla-scroll td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* PANEL DE HABITANTES */
+
+.sgph-panel-habitantes {
+  width: 100%;
+  max-width: 100%;
+}
+
+#panel-habitantes:not(:empty) {
+  margin-top: 24px;
+}
+
+#panel-habitantes > .detalle {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+  column-gap: 22px;
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 18px;
+}
+
+/* IZQUIERDA: INFORMACIÓN Y FORMULARIO */
+
+#panel-habitantes > .detalle > .marca {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#panel-habitantes > .detalle > h2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#panel-habitantes > .detalle > p {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#panel-habitantes > .detalle > form {
+  grid-column: 1;
+  grid-row: 4 / span 2;
+  min-width: 0;
+  padding: 18px;
+}
+
+/* DERECHA: REGISTROS DE HABITANTES */
+
+#panel-habitantes > .detalle > h3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-top: 8px;
+}
+
+#panel-habitantes > .detalle > #historial-habitantes {
+  grid-column: 2;
+  grid-row: 3 / span 3;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+#historial-habitantes > div {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#historial-habitantes table {
+  min-width: 650px;
+}
+
+/* PANTALLAS MEDIANAS */
+
+@media (max-width: 1000px) {
+  .sgph-privadas-grid,
+  #panel-habitantes > .detalle {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .sgph-privadas-formulario,
+  .sgph-privadas-registros {
+    padding: 18px;
+  }
+
+  .sgph-resumen-viviendas {
+    gap: 8px;
+  }
+
+  .sgph-indicador {
+    padding: 12px 9px;
+  }
+}
+
+/* CELULARES Y TABLETAS PEQUEÑAS */
+
+@media (max-width: 750px) {
+  .sgph-privadas {
+    padding: 12px;
+  }
+
+  .sgph-privadas-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .sgph-privadas-formulario,
+  .sgph-privadas-registros {
+    padding: 16px;
+  }
+
+  #panel-habitantes > .detalle {
+    display: block;
+    padding: 16px;
+  }
+
+  #panel-habitantes > .detalle > form {
+    width: 100%;
+    margin: 16px 0 22px;
+  }
+
+  #panel-habitantes > .detalle > h3 {
+    margin-top: 24px;
+  }
+
+  .sgph-indicador strong {
+    font-size: 23px;
+  }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 390px) {
+  .sgph-resumen-viviendas {
+    grid-template-columns: 1fr;
+  }
+
+  .sgph-indicador {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sgph-indicador strong {
+    font-size: 24px;
+  }
+}
+
+/* ==========================================
+   AJUSTES VISUALES DE ZONAS PRIVADAS
+   ========================================== */
+
+/* Reducir contenedores visuales anidados */
+
+.sgph-privadas {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Mantener el formulario y la tabla alineados */
+
+.sgph-privadas-grid {
+  align-items: start;
+}
+
+/* Mejorar el panel de habitantes */
+
+#panel-habitantes > .detalle {
+  align-items: start;
+  row-gap: 12px;
+}
+
+/* Reducir el espacio entre el título
+   y los registros de habitantes */
+
+#panel-habitantes > .detalle > h3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+  margin: 6px 0 12px;
+}
+
+#panel-habitantes > .detalle > #historial-habitantes {
+  grid-column: 2;
+  grid-row: 3 / span 3;
+  align-self: start;
+  margin: 0;
+}
+
+/* Tarjetas de registro ligeramente más limpias */
+
+.sgph-privadas-formulario,
+.sgph-privadas-registros {
+  box-shadow: 0 5px 18px rgba(25, 55, 85, 0.06);
+}
+
+/* Conservar presentación vertical en móviles */
+
+@media (max-width: 750px) {
+  #panel-habitantes > .detalle {
+    display: block;
+  }
+
+  #panel-habitantes > .detalle > h3 {
+    margin-top: 24px;
+  }
+}
+
+/* ==========================================
+   SGPH - ZONAS COMUNES
+   DISEÑO DE DOS COLUMNAS - JARDINES
+   ========================================== */
+
+/* Contenedor de la zona seleccionada */
+
+#contenido-zona {
+  width: 100%;
+  min-width: 0;
+  margin-top: 24px;
+}
+
+/* Organizar Jardines en dos columnas */
+
+#contenido-zona > .detalle:has(#formulario-jardines) {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 22px;
+  row-gap: 12px;
+  align-items: start;
+
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* Columna izquierda: identificación */
+
+#contenido-zona > .detalle:has(#formulario-jardines) > .marca {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#contenido-zona > .detalle:has(#formulario-jardines) > h2 {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+}
+
+#contenido-zona > .detalle:has(#formulario-jardines) > p {
+  grid-column: 1;
+  grid-row: 3;
+  margin: 0;
+}
+
+/* Columna izquierda: formulario */
+
+#contenido-zona #formulario-jardines {
+  grid-column: 1;
+  grid-row: 4;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* Columna derecha: encabezado */
+
+#contenido-zona > .detalle:has(#formulario-jardines) > h3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+
+  margin: 0;
+  padding: 12px 0;
+
+  font-size: 21px;
+  color: #173b61;
+}
+
+/* Columna derecha: historial */
+
+#historial-jardines {
+  grid-column: 2;
+  grid-row: 3 / span 2;
+
+  width: 100%;
+  min-width: 0;
+  align-self: start;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* Desplazamiento de la tabla */
+
+#historial-jardines > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-jardines table {
+  min-width: 600px;
+  width: 100%;
+}
+
+/* Totales de mantenimiento */
+
+#historial-jardines > p {
+  margin-top: 16px;
+  color: #283b4e;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-jardines) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-jardines) > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-jardines) > .marca {
+    width: 54px;
+  }
+
+  #contenido-zona #formulario-jardines {
+    padding: 16px;
+  }
+
+  #historial-jardines {
+    padding: 12px;
+  }
+}
+
+/* ==========================================
+   SGPH - CANCHAS
+   DISTRIBUCIÓN EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL DE CANCHAS */
+
+#contenido-zona > .detalle:has(#formulario-canchas) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca historial-titulo"
+    "titulo historial"
+    "uso-titulo historial"
+    "descripcion historial"
+    "uso-form historial"
+    "separador separador"
+    "mantenimiento-titulo mantenimiento-titulo"
+    "mantenimiento mantenimiento";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN GENERAL */
+
+#contenido-zona > .detalle:has(#formulario-canchas) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-canchas) > h2 {
+  grid-area: titulo;
+  margin: 0;
+}
+
+#contenido-zona > .detalle:has(#formulario-canchas) > h3:first-of-type {
+  grid-area: uso-titulo;
+  margin: 12px 0 0;
+}
+
+#contenido-zona > .detalle:has(#formulario-canchas) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+}
+
+/* IZQUIERDA: FORMULARIO DE UTILIZACIÓN */
+
+#formulario-canchas {
+  grid-area: uso-form;
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* DERECHA: HISTORIAL DE UTILIZACIÓN */
+
+#contenido-zona > .detalle:has(#formulario-canchas) > h3:nth-of-type(2) {
+  grid-area: historial-titulo;
+  margin: 8px 0 12px;
+  color: #173b61;
+}
+
+#historial-canchas {
+  grid-area: historial;
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA DE UTILIZACIÓN */
+
+#historial-canchas > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-canchas table {
+  width: 100%;
+  min-width: 650px;
+}
+
+/* SEPARACIÓN ENTRE UTILIZACIÓN Y MANTENIMIENTO */
+
+#contenido-zona > .detalle:has(#formulario-canchas) > hr {
+  grid-area: separador;
+  width: 100%;
+  margin: 22px 0 8px;
+}
+
+/* TÍTULO DE MANTENIMIENTO */
+
+#contenido-zona > .detalle:has(#formulario-canchas) > h3:nth-of-type(3) {
+  grid-area: mantenimiento-titulo;
+  margin: 8px 0 12px;
+  color: #173b61;
+}
+
+/* SEGUNDA SECCIÓN: MANTENIMIENTO */
+
+#mantenimiento-canchas {
+  grid-area: mantenimiento;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "form-mantenimiento titulo-mantenimiento"
+    "form-mantenimiento historial-mantenimiento";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* IZQUIERDA: FORMULARIO DE MANTENIMIENTO */
+
+#formulario-mantenimiento-canchas {
+  grid-area: form-mantenimiento;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#mantenimiento-canchas > h3 {
+  grid-area: titulo-mantenimiento;
+  margin: 8px 0 12px;
+  color: #173b61;
+}
+
+/* DERECHA: HISTORIAL DE MANTENIMIENTOS */
+
+#historial-mantenimiento-canchas {
+  grid-area: historial-mantenimiento;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA DE MANTENIMIENTOS */
+
+#historial-mantenimiento-canchas > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-mantenimiento-canchas table {
+  width: 100%;
+  min-width: 650px;
+}
+
+/* PÁRRAFOS DE TOTALES */
+
+#historial-canchas > p,
+#historial-mantenimiento-canchas > p {
+  margin-top: 16px;
+  color: #283b4e;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-canchas) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-canchas) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-canchas) > .marca {
+    width: 54px;
+  }
+
+  #formulario-canchas {
+    padding: 16px;
+  }
+
+  #historial-canchas {
+    padding: 12px;
+  }
+
+  #mantenimiento-canchas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #mantenimiento-canchas > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #formulario-mantenimiento-canchas {
+    padding: 16px;
+  }
+
+  #historial-mantenimiento-canchas {
+    padding: 12px;
+  }
+}
+
+/* ==========================================
+   SGPH - PARQUEADEROS DE VIVIENDAS
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca titulo-historial"
+    "titulo historial"
+    "descripcion historial"
+    "formulario historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: IDENTIFICACIÓN DE LA ZONA */
+
+#contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > h2 {
+  grid-area: titulo;
+  margin: 0;
+  color: #173b61;
+}
+
+#contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+  line-height: 1.6;
+}
+
+/* IZQUIERDA: FORMULARIO DE PARQUEADEROS */
+
+#formulario-parqueaderos-viviendas {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-parqueaderos-viviendas p {
+  margin-bottom: 15px;
+}
+
+#formulario-parqueaderos-viviendas label {
+  color: #173b61;
+  font-weight: 650;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > h3 {
+  grid-area: titulo-historial;
+
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+/* DERECHA: HISTORIAL DE PARQUEADEROS */
+
+#historial-parqueaderos {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* DESPLAZAMIENTO HORIZONTAL DE LA TABLA */
+
+#historial-parqueaderos > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-parqueaderos table {
+  width: 100%;
+  min-width: 750px;
+  margin: 0 0 16px;
+}
+
+#historial-parqueaderos th,
+#historial-parqueaderos td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* INDICADORES ECONÓMICOS */
+
+#historial-parqueaderos > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 11px;
+
+  color: #283b4e;
+  font-size: 14px;
+}
+
+#historial-parqueaderos > p strong {
+  color: #173b61;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-parqueaderos-viviendas) > .marca {
+    width: 54px;
+  }
+
+  #formulario-parqueaderos-viviendas {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #historial-parqueaderos {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #historial-parqueaderos table {
+    min-width: 700px;
+  }
+}
+
+/* ==========================================
+   SGPH - PARQUEADEROS DE VISITANTES
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenido-zona > .detalle:has(#formulario-visitantes) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca titulo-historial"
+    "titulo historial"
+    "descripcion historial"
+    "formulario historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN DE LA ZONA */
+
+#contenido-zona > .detalle:has(#formulario-visitantes) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-visitantes) > h2 {
+  grid-area: titulo;
+  margin: 0;
+  color: #173b61;
+}
+
+#contenido-zona > .detalle:has(#formulario-visitantes) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+  line-height: 1.6;
+}
+
+/* IZQUIERDA: FORMULARIO */
+
+#formulario-visitantes {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-visitantes p {
+  margin-bottom: 15px;
+}
+
+#formulario-visitantes label {
+  color: #173b61;
+  font-weight: 650;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#contenido-zona > .detalle:has(#formulario-visitantes) > h3 {
+  grid-area: titulo-historial;
+
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+/* DERECHA: HISTORIAL DE UTILIZACIÓN */
+
+#historial-visitantes {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA DESPLAZABLE */
+
+#historial-visitantes > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-visitantes table {
+  width: 100%;
+  min-width: 900px;
+  margin: 0 0 16px;
+}
+
+#historial-visitantes th,
+#historial-visitantes td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* INDICADORES ECONÓMICOS */
+
+#historial-visitantes > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 11px;
+
+  color: #283b4e;
+  font-size: 14px;
+}
+
+#historial-visitantes > p strong {
+  color: #173b61;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-visitantes) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-visitantes) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-visitantes) > .marca {
+    width: 54px;
+  }
+
+  #formulario-visitantes {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #historial-visitantes {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #historial-visitantes table {
+    min-width: 850px;
+  }
+}
+
+/* ==========================================
+   SGPH - SHUT DE BASURAS
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenido-zona > .detalle:has(#formulario-shut) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca titulo-historial"
+    "titulo historial"
+    "descripcion historial"
+    "formulario historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN GENERAL */
+
+#contenido-zona > .detalle:has(#formulario-shut) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-shut) > h2 {
+  grid-area: titulo;
+  margin: 0;
+  color: #173b61;
+}
+
+#contenido-zona > .detalle:has(#formulario-shut) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+  line-height: 1.6;
+}
+
+/* IZQUIERDA: FORMULARIO DE ACTIVIDADES */
+
+#formulario-shut {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-shut p {
+  margin-bottom: 15px;
+}
+
+#formulario-shut label {
+  color: #173b61;
+  font-weight: 650;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#contenido-zona > .detalle:has(#formulario-shut) > h3 {
+  grid-area: titulo-historial;
+
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+/* DERECHA: HISTORIAL DE ACTIVIDADES */
+
+#historial-shut {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA DESPLAZABLE */
+
+#historial-shut > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-shut table {
+  width: 100%;
+  min-width: 750px;
+  margin: 0 0 16px;
+}
+
+#historial-shut th,
+#historial-shut td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* RESUMEN DE ACTIVIDADES Y COSTOS */
+
+#historial-shut > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 11px;
+
+  color: #283b4e;
+  font-size: 14px;
+}
+
+#historial-shut > p strong {
+  color: #173b61;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-shut) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-shut) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-shut) > .marca {
+    width: 54px;
+  }
+
+  #formulario-shut {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #historial-shut {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #historial-shut table {
+    min-width: 700px;
+  }
+}
+
+/* ==========================================
+   SGPH - LUMINARIAS
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenido-zona > .detalle:has(#formulario-luminarias) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca titulo-historial"
+    "titulo historial"
+    "descripcion historial"
+    "formulario historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN GENERAL */
+
+#contenido-zona > .detalle:has(#formulario-luminarias) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-luminarias) > h2 {
+  grid-area: titulo;
+  margin: 0;
+  color: #173b61;
+}
+
+#contenido-zona > .detalle:has(#formulario-luminarias) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+  line-height: 1.6;
+}
+
+/* IZQUIERDA: FORMULARIO DE LUMINARIAS */
+
+#formulario-luminarias {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-luminarias p {
+  margin-bottom: 15px;
+}
+
+#formulario-luminarias label {
+  color: #173b61;
+  font-weight: 650;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#contenido-zona > .detalle:has(#formulario-luminarias) > h3 {
+  grid-area: titulo-historial;
+
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+/* DERECHA: HISTORIAL DE LUMINARIAS */
+
+#historial-luminarias {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA CON DESPLAZAMIENTO HORIZONTAL */
+
+#historial-luminarias > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-luminarias table {
+  width: 100%;
+  min-width: 900px;
+  margin: 0 0 16px;
+}
+
+#historial-luminarias th,
+#historial-luminarias td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* INDICADORES DE INTERVENCIONES Y COSTOS */
+
+#historial-luminarias > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 11px;
+
+  color: #283b4e;
+  font-size: 14px;
+}
+
+#historial-luminarias > p strong {
+  color: #173b61;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-luminarias) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-luminarias) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-luminarias) > .marca {
+    width: 54px;
+  }
+
+  #formulario-luminarias {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #historial-luminarias {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #historial-luminarias table {
+    min-width: 850px;
+  }
+}
+
+/* ==========================================
+   SGPH - FACHADAS
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenido-zona > .detalle:has(#formulario-fachadas) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca titulo-historial"
+    "titulo historial"
+    "descripcion historial"
+    "formulario historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN DE FACHADAS */
+
+#contenido-zona > .detalle:has(#formulario-fachadas) > .marca {
+  grid-area: marca;
+}
+
+#contenido-zona > .detalle:has(#formulario-fachadas) > h2 {
+  grid-area: titulo;
+  margin: 0;
+  color: #173b61;
+}
+
+#contenido-zona > .detalle:has(#formulario-fachadas) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+  line-height: 1.6;
+}
+
+/* IZQUIERDA: FORMULARIO */
+
+#formulario-fachadas {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-fachadas p {
+  margin-bottom: 15px;
+}
+
+#formulario-fachadas label {
+  color: #173b61;
+  font-weight: 650;
+}
+
+/* DERECHA: TÍTULO DEL HISTORIAL */
+
+#contenido-zona > .detalle:has(#formulario-fachadas) > h3 {
+  grid-area: titulo-historial;
+
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+/* DERECHA: HISTORIAL DE INTERVENCIONES */
+
+#historial-fachadas {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+/* TABLA CON DESPLAZAMIENTO HORIZONTAL */
+
+#historial-fachadas > div {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-fachadas table {
+  width: 100%;
+  min-width: 900px;
+  margin: 0 0 16px;
+}
+
+#historial-fachadas th,
+#historial-fachadas td {
+  padding: 12px 11px;
+  font-size: 13px;
+}
+
+/* INDICADORES DE INTERVENCIONES Y COSTOS */
+
+#historial-fachadas > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #e8f3f5;
+  border: 1px solid #cfe5ea;
+  border-radius: 11px;
+
+  color: #283b4e;
+  font-size: 14px;
+}
+
+#historial-fachadas > p strong {
+  color: #173b61;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  #contenido-zona > .detalle:has(#formulario-fachadas) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-fachadas) > * {
+    max-width: 100%;
+  }
+
+  #contenido-zona > .detalle:has(#formulario-fachadas) > .marca {
+    width: 54px;
+  }
+
+  #formulario-fachadas {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #historial-fachadas {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #historial-fachadas table {
+    min-width: 850px;
+  }
+}
+
+/* ==========================================
+   SGPH - COMITÉ DE CONVIVENCIA
+   DISEÑO EN DOS COLUMNAS
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+.detalle:has(> #formulario-convivencia) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca historial-titulo"
+    "titulo historial"
+    "descripcion historial"
+    "registro historial"
+    "formulario historial"
+    "separador historial"
+    "boton-ind historial"
+    "boton-mult historial"
+    "indicadores indicadores"
+    "multas multas"
+    "seguimiento seguimiento";
+
+  column-gap: 22px;
+  row-gap: 12px;
+  align-items: start;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+}
+
+/* IZQUIERDA: INFORMACIÓN */
+
+.detalle:has(> #formulario-convivencia) > .marca {
+  grid-area: marca;
+}
+
+.detalle:has(> #formulario-convivencia) > h2 {
+  grid-area: titulo;
+  margin: 0;
+}
+
+.detalle:has(> #formulario-convivencia) > p {
+  grid-area: descripcion;
+  margin: 0;
+  color: #607386;
+}
+
+.detalle:has(> #formulario-convivencia) > h3:first-of-type {
+  grid-area: registro;
+  margin: 12px 0 0;
+}
+
+/* IZQUIERDA: REGISTRO DE CASOS */
+
+#formulario-convivencia {
+  grid-area: formulario;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+
+  background: #f7fafc;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#formulario-convivencia p {
+  margin-bottom: 15px;
+}
+
+/* BOTONES DE CONSULTA */
+
+.detalle:has(> #formulario-convivencia) > hr {
+  grid-area: separador;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#boton-indicadores {
+  grid-area: boton-ind;
+}
+
+#boton-multas {
+  grid-area: boton-mult;
+}
+
+#boton-indicadores,
+#boton-multas {
+  width: 100%;
+  margin: 0;
+  min-height: 46px;
+}
+
+/* DERECHA: HISTORIAL DE CASOS */
+
+.detalle:has(> #formulario-convivencia) > h3:last-of-type {
+  grid-area: historial-titulo;
+  margin: 8px 0 12px;
+  color: #173b61;
+  font-size: 21px;
+}
+
+#historial-convivencia {
+  grid-area: historial;
+
+  width: 100%;
+  min-width: 0;
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#historial-convivencia > div {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historial-convivencia table {
+  width: 100%;
+  min-width: 1050px;
+}
+
+#historial-convivencia > p {
+  margin-top: 15px;
+  padding: 12px 14px;
+  background: #e8f3f5;
+  border-radius: 11px;
+}
+
+/* INDICADORES Y MULTAS */
+
+#panel-indicadores {
+  grid-area: indicadores;
+  min-width: 0;
+}
+
+#panel-multas {
+  grid-area: multas;
+  min-width: 0;
+}
+
+#panel-indicadores:empty,
+#panel-multas:empty,
+#seguimiento-convivencia:empty {
+  display: none;
+}
+
+#panel-indicadores:not(:empty),
+#panel-multas:not(:empty) {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* PANEL DE MULTAS EN DOS COLUMNAS */
+
+#panel-multas > .detalle:has(> #formulario-multas) {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  grid-template-areas:
+    "marca historial-titulo"
+    "titulo historial"
+    "descripcion historial"
+    "registro historial"
+    "formulario historial"
+    "aviso historial";
+
+  column-gap: 22px;
+  row-gap: 12px;
+
+  align-items: start;
+  max-width: 100%;
+  padding: 22px;
+}
+
+#panel-multas > .detalle > .marca {
+  grid-area: marca;
+}
+
+#panel-multas > .detalle > h2 {
+  grid-area: titulo;
+  margin: 0;
+}
+
+#panel-multas > .detalle > p:not(.mensaje) {
+  grid-area: descripcion;
+  margin: 0;
+}
+
+#panel-multas > .detalle > h3:first-of-type {
+  grid-area: registro;
+  margin: 12px 0 0;
+}
+
+#formulario-multas {
+  grid-area: formulario;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+}
+
+#panel-multas > .detalle > .mensaje {
+  grid-area: aviso;
+}
+
+#panel-multas > .detalle > h3:last-of-type {
+  grid-area: historial-titulo;
+  margin: 8px 0 12px;
+}
+
+#historial-multas {
+  grid-area: historial;
+  width: 100%;
+  min-width: 0;
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#historial-multas > div {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#historial-multas table {
+  min-width: 850px;
+}
+
+/* SEGUIMIENTO DE CASOS */
+
+#seguimiento-convivencia {
+  grid-area: seguimiento;
+  min-width: 0;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* SEGUIMIENTO: FORMULARIO IZQUIERDO,
+   HISTORIAL DERECHO */
+
+#seguimiento-convivencia > .detalle {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.4fr);
+
+  column-gap: 22px;
+  row-gap: 10px;
+
+  align-items: start;
+  max-width: 100%;
+  padding: 22px;
+}
+
+#seguimiento-convivencia > .detalle > h3:first-of-type {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0 0 12px;
+}
+
+#seguimiento-convivencia > .detalle > p {
+  grid-column: 1;
+  margin: 0;
+}
+
+#seguimiento-convivencia > .detalle > p:nth-of-type(1) {
+  grid-row: 2;
+}
+
+#seguimiento-convivencia > .detalle > p:nth-of-type(2) {
+  grid-row: 3;
+}
+
+#seguimiento-convivencia > .detalle > p:nth-of-type(3) {
+  grid-row: 4;
+}
+
+#formulario-seguimiento {
+  grid-column: 1;
+  grid-row: 5;
+  width: 100%;
+  min-width: 0;
+  margin: 12px 0 0;
+  padding: 20px;
+}
+
+#seguimiento-convivencia > .detalle > h3:last-of-type {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 0 12px;
+}
+
+#historial-seguimiento {
+  grid-column: 2;
+  grid-row: 2 / span 4;
+  min-width: 0;
+  width: 100%;
+
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 16px;
+}
+
+#historial-seguimiento > div {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#historial-seguimiento table {
+  min-width: 550px;
+}
+
+/* INDICADORES DE CONVIVENCIA */
+
+#panel-indicadores > .detalle {
+  max-width: 100%;
+  padding: 22px;
+}
+
+#panel-indicadores .modulos {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+#panel-indicadores .tarjeta {
+  min-height: 135px;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  .detalle:has(> #formulario-convivencia) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  .detalle:has(> #formulario-convivencia) > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .detalle:has(> #formulario-convivencia) > .marca {
+    width: 54px;
+  }
+
+  #formulario-convivencia,
+  #formulario-seguimiento,
+  #formulario-multas {
+    padding: 16px;
+  }
+
+  #historial-convivencia,
+  #historial-seguimiento,
+  #historial-multas {
+    padding: 12px;
+  }
+
+  #panel-multas > .detalle:has(> #formulario-multas),
+  #seguimiento-convivencia > .detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  #panel-multas > .detalle:has(> #formulario-multas) > *,
+  #seguimiento-convivencia > .detalle > * {
+    max-width: 100%;
+  }
+
+  #panel-indicadores .modulos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   CORRECCIÓN DEL PANEL DE MULTAS
+   EVITAR TEXTOS SUPERPUESTOS
+   ========================================== */
+
+#panel-multas > .detalle:has(> #formulario-multas) {
+  grid-template-areas:
+    "marca historial-titulo"
+    "titulo historial"
+    "descripcion historial"
+    "registro historial"
+    "casos-total historial"
+    "casos-disponibles historial"
+    "formulario historial"
+    "aviso historial";
+
+  grid-template-rows: auto;
+  row-gap: 14px;
+}
+
+/* DESCRIPCIÓN DEL MÓDULO */
+
+#panel-multas > .detalle > p:nth-of-type(1) {
+  grid-area: descripcion;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* NÚMERO DE CASOS REGISTRADOS */
+
+#panel-multas > .detalle > p:nth-of-type(2) {
+  grid-area: casos-total;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* CASOS DISPONIBLES PARA MULTAS */
+
+#panel-multas > .detalle > p:nth-of-type(3) {
+  grid-area: casos-disponibles;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* FORMULARIO DE MULTAS */
+
+#panel-multas #formulario-multas {
+  grid-area: formulario;
+  margin-top: 8px;
+}
+
+/* HISTORIAL DE MULTAS */
+
+#panel-multas #historial-multas {
+  grid-area: historial;
+  align-self: start;
+  min-width: 0;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 750px) {
+  #panel-multas > .detalle:has(> #formulario-multas) {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

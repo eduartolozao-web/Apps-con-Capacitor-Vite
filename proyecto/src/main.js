@@ -32,7 +32,7 @@ function mostrarInicio() {
     <header class="encabezado">
       <div class="marca">🏢</div>
       <h1>SISTEMA DE GESTIÓN DE PROPIEDAD HORIZONTAL</h1>
-      <p>Sistema de Gestión de Propiedad Horizontal</p>
+     
     </header>
 
     <main class="contenedor">
