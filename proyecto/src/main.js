@@ -1,5 +1,6 @@
 
 import './style.css'
+import { mostrarZonasComunes, seleccionarZona } from './modulos/zonasComunes.js'
 
 const modulos = [
   {
@@ -82,17 +83,38 @@ function mostrarModulo(id) {
         ← Volver al inicio
       </button>
 
-      <section class="detalle">
-        <h2>${modulo.nombre}</h2>
-        <p>${modulo.descripcion}</p>
-        <p class="mensaje">
-          Este módulo está preparado para comenzar su desarrollo.
-        </p>
-      </section>
+      ${id === 'zonas-comunes' ? mostrarZonasComunes() : `
+  <section class="detalle">
+
+    <div class="marca">${modulo.icono}</div>
+
+    <h2>${modulo.nombre}</h2>
+
+    <p>${modulo.descripcion}</p>
+
+    <p class="mensaje">
+      Este módulo está preparado para comenzar su desarrollo.
+    </p>
+
+  </section>
+`}
     </main>
   `
 
   document.querySelector('#volver').addEventListener('click', mostrarInicio)
+  if (id === 'zonas-comunes') {
+
+  document.querySelectorAll('[data-zona]').forEach(boton => {
+
+    boton.addEventListener('click', () => {
+
+      seleccionarZona(boton.dataset.zona)
+
+    })
+
+  })
+
+}
 }
 
 mostrarInicio()

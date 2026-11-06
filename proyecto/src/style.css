@@ -294,3 +294,80 @@ code {
     border-right-color: var(--border);
   }
 }
+/* AJUSTE DEL ENCABEZADO PRINCIPAL */
+
+.encabezado {
+  padding: 35px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #12365a, #20649a);
+  color: white;
+}
+
+.encabezado h1 {
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.25;
+  max-width: 950px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  overflow-wrap: break-word;
+}
+
+/* ORGANIZACIÓN DE LOS MÓDULOS */
+
+.modulos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 28px 20px;
+  border: 1px solid #dce4ed;
+  border-radius: 14px;
+  background: white;
+  color: #263238;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta h3 {
+  color: #12365a;
+  margin: 12px 0;
+}
+
+.tarjeta p {
+  color: #617080;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.entrar {
+  background: #20649a;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 850px) {
+  .modulos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .modulos {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado h1 {
+    font-size: 23px;
+  }
+}
