@@ -1,6 +1,13 @@
 
 import './style.css'
 import { mostrarZonasComunes, seleccionarZona } from './modulos/zonasComunes.js'
+import { mostrarCanchas } from './canchas.js'
+import { mostrarParqueaderosViviendas } from './parqueaderosViviendas.js'
+import { mostrarParqueaderosVisitantes } from './parqueaderosVisitantes.js'
+import { mostrarShutBasuras } from './shutBasuras.js'
+import { mostrarLuminarias } from './luminarias.js'
+import { mostrarFachadas } from './fachadas.js'
+import { mostrarConvivencia } from './modulos/convivencia.js'
 
 const modulos = [
   {
@@ -102,6 +109,15 @@ function mostrarModulo(id) {
   `
 
   document.querySelector('#volver').addEventListener('click', mostrarInicio)
+  // MOSTRAR EL FORMULARIO DE CONVIVENCIA
+
+if (id === 'convivencia') {
+  const contenido = document.querySelector('.detalle')
+
+  if (contenido) {
+    mostrarConvivencia(contenido)
+  }
+}
   if (id === 'zonas-comunes') {
 
   document.querySelectorAll('[data-zona]').forEach(boton => {
