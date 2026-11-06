@@ -371,3 +371,65 @@ code {
     font-size: 23px;
   }
 }
+
+/* CORRECCIÓN DE COLORES - INDICADORES DE CONVIVENCIA */
+
+#panel-indicadores {
+  color: #263238;
+}
+
+#panel-indicadores .detalle {
+  background-color: #ffffff;
+  color: #263238;
+}
+
+#panel-indicadores h2,
+#panel-indicadores h3 {
+  color: #12365a;
+}
+
+#panel-indicadores p {
+  color: #526477;
+}
+
+/* TARJETAS DE INDICADORES */
+
+#panel-indicadores .tarjeta {
+  background-color: #ffffff;
+  color: #263238;
+  border: 1px solid #dce4ed;
+}
+
+#panel-indicadores .tarjeta h2 {
+  color: #20649a;
+  font-size: 32px;
+}
+
+#panel-indicadores .tarjeta h3 {
+  color: #12365a;
+}
+
+/* TABLAS DE INDICADORES */
+
+#panel-indicadores table {
+  background-color: #ffffff;
+  color: #263238;
+  border-collapse: collapse;
+}
+
+#panel-indicadores th {
+  background-color: #12365a;
+  color: #ffffff;
+  padding: 12px;
+}
+
+#panel-indicadores td {
+  background-color: #ffffff;
+  color: #263238;
+  padding: 12px;
+  border: 1px solid #dce4ed;
+}
+
+#panel-indicadores tr:nth-child(even) td {
+  background-color: #f2f5f9;
+}

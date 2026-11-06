@@ -1,12 +1,6 @@
 
 import './style.css'
 import { mostrarZonasComunes, seleccionarZona } from './modulos/zonasComunes.js'
-import { mostrarCanchas } from './canchas.js'
-import { mostrarParqueaderosViviendas } from './parqueaderosViviendas.js'
-import { mostrarParqueaderosVisitantes } from './parqueaderosVisitantes.js'
-import { mostrarShutBasuras } from './shutBasuras.js'
-import { mostrarLuminarias } from './luminarias.js'
-import { mostrarFachadas } from './fachadas.js'
 import { mostrarConvivencia } from './modulos/convivencia.js'
 
 const modulos = [
